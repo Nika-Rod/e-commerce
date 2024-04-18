@@ -1,0 +1,15 @@
+# Arquivos temporários
+*~
+
+# Arquivos de compilação
+*.o
+*.out
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Dependências e diretórios gerados
+/node_modules
+/build
+/dist
