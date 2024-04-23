@@ -14,3 +14,30 @@ body{
     display: inline-block;
     margin-right: 10px; 
 }
+
+#logo-empresa {
+    width: 5em;
+    height: auto;
+}
+.carousel-image {
+    width: 30em;
+    height: auto;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* #div-carousel{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image{
+    width: 100%;
+    flex-shrink: 0;
+} */
