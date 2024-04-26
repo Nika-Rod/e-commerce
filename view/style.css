@@ -29,3 +29,7 @@ body{
     height: auto; 
     object-fit: contain; 
 }
+
+#prevBtn, #proxBtn {
+    cursor: pointer;
+} 
