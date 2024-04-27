@@ -14,3 +14,5 @@ prevBtn.addEventListener("click", () => {
     index = (index - 1 + carouselItems.length) % carouselItems.length; 
     carouselItems[index].classList.remove("d-none"); 
 });
+
+fun
