@@ -4,6 +4,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main{
+    margin-bottom: 10em;
+}
+
 #list-menu{
     padding: 0;
     margin: 0;
@@ -33,3 +37,8 @@ body{
 #prevBtn, #proxBtn {
     cursor: pointer;
 } 
+
+.img-social{
+    width: 2em;
+    height: auto;
+}

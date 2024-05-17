@@ -36,19 +36,29 @@
             </div>
 
             <div id="div-carousel" class="d-flex justify-content-center">
-                <img src="image/image-01.jpg" alt="produto-1" id="img-1" class="carousel-image">
-                <img src="image/image-02.jpg" alt="produto-2" id="img-2" class="carousel-image d-none">
-                <img src="image/image-03.jpg" alt="produto-3" id="img-3" class="carousel-image d-none">
-                <img src="image/image-04.jpg" alt="produto-4" id="img-4" class="carousel-image d-none">
-                <img src="image/image-05.jpg" alt="produto-5" id="img-5" class="carousel-image d-none">
+                <div class="carousel-image">
+                    <img src="image/image-01.jpg" alt="produto-1" id="img-1">
+                </div>
+                <div class="carousel-image">
+                    <img src="image/image-02.jpg" alt="produto-2" id="img-2" class="d-none">
+                </div>
+                <div class="carousel-image">
+                    <img src="image/image-03.jpg" alt="produto-3" id="img-3" class="d-none">
+                </div>
+                <div class="carousel-image">
+                    <img src="image/image-04.jpg" alt="produto-4" id="img-4" class="d-none">
+                </div>
+                <div class="carousel-image">
+                    <img src="image/image-05.jpg" alt="produto-5" id="img-5" class="d-none">
+                </div>
             </div>
 
-            <!-- <img id="prevBtn" src="image/SVG/seta-para-a-esquerda.svg" alt="">
-            <img id="proxBtn" src="image/SVG/seta-para-a-direita.svg" alt=""> -->
+            <!-- <a href="" onclick=""><img id="prevBtn" src="image/SVG/seta-para-a-esquerda.svg" alt=""></a>
+            <a href="" onclick=""><img id="proxBtn" src="image/SVG/seta-para-a-direita.svg" alt=""> </a> -->
         </div>
     </main>
 
-    <container class="row">
+    <container class="row mt-5">
         <div class="container d-flex">
             <div>
                 <h2>Quem Somos?</h2>
@@ -70,26 +80,33 @@
     <div class="container mt-5">
         <div class="row row-cols-2">
 
-            <div class="col-5">
+            <div class="col-6">
                 <h3>Satisfação de nossos Clientes:</h3>
-                <span>Nos mande um Email:</span>
             </div>
-            
-            <div class="col-7">
-                <h2>Ficou interessado?</h2>
-                <span>Nos mande um Email:</span>
 
-                <form>
-                    <div class="row row-cols-2 mt-">                 
-                        <label class="col">Nome: <input type="text"></label>
-                        <label class="col">Sobrenome: <input type="text"></label>
-                        <label class="col-12">Email: <input type="email"></label>
-                        <label class="col-12">Título do Email: <input type="text"></label>
-                        <label class="col">Assunto do Email:<textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea></label>                   
+            <div class="col-6">
+                <h2>Ficou interessado?</h2>
+                <span>Entre em contato</span>
+
+                <div class="d-flex flex-column align-items-center">
+                    <div class="mt-3 mb-3">
+                        <a href=""><img src="image/whatsapp.png" alt="" class="img-social">WhatsApp</a>
                     </div>
-                </form>
+
+                    <div class="mb-3">
+                        <a href=""><img src="image/instagram.png" alt="" class="img-social">Instagram</a>
+                    </div>
+
+                    <div class="mb-3">
+                        <a href=""><img src="image/facebook.png" alt="" class="img-social">Facebook</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="form-products">
+
     </div>
 
     <script src="js/home.js"></script>
