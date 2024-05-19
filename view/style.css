@@ -2,21 +2,41 @@ body{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque;
+    background-color: #f3f1e9;
+    border: 0;
+    vertical-align: baseline;
+    overflow-x: hidden;
+}
+
+nav{
+    position: relative;
+    background-color: #FFF;
+    margin-left: 10em;
+    margin-right: 10em;
+    border-radius: 0 0 15px 15px;
 }
 
 main{
     margin-bottom: 10em;
-    background-image: url('image/background.png');
-    background-repeat: no-repeat;
+}
+
+.div-background{
+    background-image: url('image/background-2.png');
     background-size: cover;
     background-position: right;
+    border-bottom-left-radius: 10em;
+    border-top-right-radius: 15em;
+    width: 120em;
+    height: 35em;
+    margin: auto;
 }
 
 #list-menu{
     padding: 0;
     margin: 0;
     list-style-type: none;
+    font-family: sans-serif;
+    font-weight: 700;
 }
 
 .list-menu-item{
@@ -49,6 +69,6 @@ main{
 }
 
 .banner-image img{
-    width: 40em;
+    width: 50em;
     height: auto;
 }
