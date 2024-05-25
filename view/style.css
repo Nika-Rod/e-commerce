@@ -8,16 +8,20 @@ body{
     overflow-x: hidden;
 }
 
+button {
+    background-color: #FFF;
+    border: #ADD8E6 solid 2px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 35%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 5%;
+}
 nav{
     position: relative;
     background-color: #FFF;
     margin-left: 10em;
     margin-right: 10em;
     border-radius: 0 0 15px 15px;
-}
-
-main{
-    margin-bottom: 5em;
 }
 
 .image-container{
@@ -98,8 +102,19 @@ main{
     padding-top: 5em;
     background: linear-gradient(183deg, #f3f1e9 8%, #FFF 1%);
     position: relative;
-    background-color: #FFF;
     overflow: hidden;
+}
+
+.about-us{
+    background: linear-gradient(3deg, #F8BBC8 72%, #FFF 1%);
+    position: relative;
+    overflow: hidden;
+    padding: 15em 0 5em 0;
+}
+
+.info-social{
+    background: linear-gradient(177deg, #F8BBC8 22%, #FFF 1%);
+    padding-top: 10rem;
 }
 
 
