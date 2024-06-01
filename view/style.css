@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
 body{
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Edu TAS Beginner";
     background-color: #f3f1e9;
     border: 0;
     vertical-align: baseline;
@@ -24,6 +26,13 @@ nav{
     border-radius: 0 0 15px 15px;
 }
 
+h1, h2 {
+    font-family: "Caveat";
+}
+
+span{
+    font-size: 20px;
+}
 .image-container{
     flex: 1;
     padding: 5px;
@@ -65,8 +74,9 @@ nav{
     padding: 0;
     margin: 0;
     list-style-type: none;
-    font-family: sans-serif;
+    font-family: "Caveat";
     font-weight: 700;
+    font-size: 1.3em;
 }
 
 .list-menu-item{
@@ -100,7 +110,7 @@ nav{
 
 .products-image{
     padding-top: 5em;
-    background: linear-gradient(183deg, #f3f1e9 8%, #FFF 1%);
+    background: linear-gradient(181deg, #f3f1e9 8%, #FFF 1%);
     position: relative;
     overflow: hidden;
 }
@@ -113,15 +123,36 @@ nav{
 }
 
 .info-social{
-    background: linear-gradient(177deg, #F8BBC8 22%, #FFF 1%);
-    padding-top: 10rem;
+    background: linear-gradient(177deg, #F8BBC8 18%, #ADD8E6 1%);
+    padding: 10rem 0;
 }
 
+.about-us-img{
+    height: 22em;
+}
+
+.about-us-img img{
+    width: 25em;
+    height: auto;
+}
+
+.customer-experience{
+    background-color: #FFF;
+    border-top-left-radius: 0;
+    border-top-right-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 0;
+}
+
+.customer-name{
+    font-weight: bold;
+    text-align: right;
+}
 
 @media (max-width: 991px) { 
 
     .banner-image img{
-        width: 25em;
+        width: 5em;
         height: auto;
     }
 
@@ -140,7 +171,7 @@ nav{
 @media (min-width: 992px) and (max-width: 1199px) { 
 
     .banner-image img{
-        width: 30em;
+        width: 10em;
         height: auto;
     }
 
@@ -159,7 +190,7 @@ nav{
 @media (min-width: 1200px) { 
 
     .banner-image img{
-        width: 50em;
+        width: 30em;
         height: auto;
     }
 
