@@ -149,6 +149,18 @@ span{
     text-align: right;
 }
 
+.number-phone{
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.number-phone.show {
+    opacity: 1;
+    height: auto; 
+}
+
 @media (max-width: 991px) { 
 
     .banner-image img{
