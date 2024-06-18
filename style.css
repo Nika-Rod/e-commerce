@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-body {
+* {
     padding: 0;
     margin: 0;
+  }
+
+body {
     font-family: "Montserrat";
     background-color: #f3f1e9;
-    border: 0;
-    vertical-align: baseline;
     overflow-x: hidden;
 }
 
@@ -128,7 +128,6 @@ span {
 .about-us {
     /* background: linear-gradient(3deg, #EB68C2 72%, #FFF 1%); */
     background-color: #EB68C2;
-    position: relative;
     overflow: hidden;
     padding: 5em 0 5em 0;
 }
@@ -172,6 +171,71 @@ span {
     opacity: 1;
     height: auto;
 }
+
+.list {
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+  
+  .list li {
+    list-style-type: none;
+    
+    width: 200px;
+    height: 200px;
+    opacity: .25;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 2px;
+    background: #9C89B8;
+    transition: transform 1s, opacity 1s;
+  }
+  
+  .list .act {
+    opacity: 1;
+  }
+  
+  .list .prev,
+  .list .next {
+    cursor: pointer;
+  }
+  
+  .list .prev {
+    transform: translateX(-220px) scale(.85);
+  }
+  
+  .list .next {
+    transform: translateX(220px) scale(.85);
+  }
+  
+  .list .hide {
+    transform: translateX(-420px) scale(.85);
+  }
+  
+  .list .new-next {
+    transform: translateX(420px) scale(.85);
+  }
+  
+  .list .hide,
+  .list .new-next {
+    opacity: 0;
+    transition: opacity .5s, transform .5s;
+  }
+  
+  .swipe {
+    width: 270px;
+    height: 200px;
+    position: absolute;
+    background-color: green;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+  }
 
 @media (max-width: 991px) {
 
