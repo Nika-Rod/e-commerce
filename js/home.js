@@ -22,103 +22,66 @@ function collapse() {
     }
 }
 
+
+const data = [
+  { title: "Title 1", subtitle: "Subtitle 1", description: "Description 1" },
+  { title: "Title 2", subtitle: "Subtitle 2", description: "Description 2" },
+  { title: "Title 3", subtitle: "Subtitle 3", description: "Description 3" },
+  { title: "Title 4", subtitle: "Subtitle 4", description: "Description 4" },
+  { title: "Title 5", subtitle: "Subtitle 5", description: "Description 5" }
+];
+
 const $ = selector => document.querySelector(selector);
 const $$ = selector => document.querySelectorAll(selector);
 
-// Simulando dados dinâmicos
-const data = [
-  "Content 1",
-  "Content 2",
-  "Content 3",
-  "Content 4",
-  "Content 5"
-];
 
-let currentIndex = 0;
 
-function createComponent(content) {
-  const container = document.createElement('div');
+let currentIndex = 2; // Assuming the starting 'act' element is at index 2
+const elements = $$(".list li");
 
-  const h3 = document.createElement('h3');
-  h3.textContent = content;
+function updateClasses() {
+  elements.forEach((el, index) => {
+    el.classList.remove("hide", "prev", "act", "next", "new-next");
 
-  const span = document.createElement('span');
-  span.textContent = content;
+    if (index === currentIndex - 2) {
+      el.classList.add("hide");
+    } else if (index === currentIndex - 1) {
+      el.classList.add("prev");
+    } else if (index === currentIndex) {
+      el.classList.add("act");
+    } else if (index === currentIndex + 1) {
+      el.classList.add("next");
+    } else if (index === currentIndex + 2) {
+      el.classList.add("new-next");
+    }
+  });
 
-  container.appendChild(h3);
-  container.appendChild(span);
-
-  return container;
-}
-
-function updateContent() {
-  const items = $$(".list li");
-  items[0].innerHTML = "";
-  items[1].innerHTML = "";
-  items[2].innerHTML = "";
-
-  items[0].appendChild(createComponent(data[(currentIndex - 1 + data.length) % data.length]));
-  items[1].appendChild(createComponent(data[currentIndex]));
-  items[2].appendChild(createComponent(data[(currentIndex + 1) % data.length]));
+  // Handle edge cases for circular navigation
+  if (currentIndex - 2 < 0) {
+    elements[elements.length + (currentIndex - 2)].classList.add("hide");
+  }
+  if (currentIndex - 1 < 0) {
+    elements[elements.length + (currentIndex - 1)].classList.add("prev");
+  }
+  if (currentIndex + 1 >= elements.length) {
+    elements[(currentIndex + 1) % elements.length].classList.add("next");
+  }
+  if (currentIndex + 2 >= elements.length) {
+    elements[(currentIndex + 2) % elements.length].classList.add("new-next");
+  }
 }
 
 function next() {
-  currentIndex = (currentIndex + 1) % data.length;
-
-  const current = $(".act");
-  const next = $(".next");
-  const prev = $(".prev");
-
-  // Atualiza classes
-  prev.classList.remove("prev");
-  current.classList.remove("act");
-  current.classList.add("prev");
-  next.classList.remove("next");
-  next.classList.add("act");
-
-  const newNextIndex = (currentIndex + 1) % data.length;
-  const newNext = document.createElement("li");
-  newNext.appendChild(createComponent(data[newNextIndex]));
-  newNext.classList.add("next");
-
-  $(".list").appendChild(newNext);
-  $(".list").removeChild(prev);
-
-  updateContent();
+  currentIndex = (currentIndex + 1) % elements.length;
+  updateClasses();
 }
 
 function prev() {
-  currentIndex = (currentIndex - 1 + data.length) % data.length;
-
-  const current = $(".act");
-  const next = $(".next");
-  const prev = $(".prev");
-
-  // Atualiza classes
-  next.classList.remove("next");
-  current.classList.remove("act");
-  current.classList.add("next");
-  prev.classList.remove("prev");
-  prev.classList.add("act");
-
-  // Calcula o índice do novo elemento "prev"
-  const newPrevIndex = (currentIndex - 1 + data.length) % data.length;
-  const newPrev = document.createElement("li");
-  newPrev.appendChild(createComponent(data[newPrevIndex]));
-  newPrev.classList.add("prev");
-
-  // Insere o novo "prev" antes do atual
-  $(".list").insertBefore(newPrev, current);
-
-  // Remove o antigo "next"
-  $(".list").removeChild(next);
-
-  // Atualiza o conteúdo da lista
-  updateContent();
+  currentIndex = (currentIndex - 1 + elements.length) % elements.length;
+  updateClasses();
 }
 
-
-function slide(element) {
+const slide = element => {
   if (element.classList.contains('next')) {
     next();
   } else if (element.classList.contains('prev')) {
@@ -126,23 +89,24 @@ function slide(element) {
   }
 }
 
-const slider = $(".list");
-const swipe = new Hammer($(".swipe"));
+const slider = $(".list"),
+      swipe = new Hammer($(".swipe"));
 
 slider.onclick = event => {
   slide(event.target);
-};
+}
 
-swipe.on("swipeleft", () => {
+swipe.on("swipeleft", ev => {
   next();
 });
 
-swipe.on("swiperight", () => {
+swipe.on("swiperight", ev => {
   prev();
 });
 
-// Inicializa o conteúdo ao carregar a página
-updateContent();
+// Initialize classes on load
+updateClasses();
+
 
 
 
