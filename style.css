@@ -229,7 +229,7 @@ span {
 
 
 
-/* @media (max-width: 991px) {
+@media (max-width: 991px) {
 
     .banner-image img {
         width: 5em;
@@ -274,4 +274,4 @@ span {
         height: auto;
     }
 
-} */
+}
