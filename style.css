@@ -149,10 +149,7 @@ span {
 
 .customer-experience {
     background-color: #FFF;
-    border-top-left-radius: 0;
-    border-top-right-radius: 3em;
-    border-bottom-left-radius: 3em;
-    border-bottom-right-radius: 0;
+
 }
 
 .customer-name {
@@ -177,67 +174,62 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%)
-  }
-  
-  .list li {
+    transform: translate(-50%, -50%);
+}
+
+.list li {
     list-style-type: none;
-    
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     opacity: .25;
     position: absolute;
     left: 50%;
     margin-left: -100px;
     border-radius: 2px;
-    background: #9C89B8;
+    background: #FFF;
+    color: black;
     transition: transform 1s, opacity 1s;
-  }
-  
-  .list .act {
+    padding: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 0;
+}
+
+.list .act {
     opacity: 1;
-  }
-  
-  .list .prev,
-  .list .next {
+    transform: translateX(0) scale(1);
+    z-index: 10;
+}
+
+.list .prev,
+.list .next {
     cursor: pointer;
-  }
-  
-  .list .prev {
+}
+
+.list .prev {
     transform: translateX(-220px) scale(.85);
-  }
-  
-  .list .next {
+}
+
+.list .next {
     transform: translateX(220px) scale(.85);
-  }
-  
-  .list .hide {
-    transform: translateX(-420px) scale(.85);
-  }
-  
-  .list .new-next {
-    transform: translateX(420px) scale(.85);
-  }
-  
-  .list .hide,
-  .list .new-next {
-    opacity: 0;
-    transition: opacity .5s, transform .5s;
-  }
-  
-  .swipe {
-    width: 270px;
-    height: 200px;
+}
+
+.swipe {
+    width: 370px;
+    height: 300px;
     position: absolute;
     background-color: green;
     border-radius: 2px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
-  }
+}
 
-@media (max-width: 991px) {
+
+
+/* @media (max-width: 991px) {
 
     .banner-image img {
         width: 5em;
@@ -282,4 +274,4 @@ span {
         height: auto;
     }
 
-}
+} */
