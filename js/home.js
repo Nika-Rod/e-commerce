@@ -22,53 +22,59 @@ function collapse() {
     }
 }
 
+const $ = selector => document.querySelector(selector);
+const $$ = selector => document.querySelectorAll(selector);
 
 const data = [
-  { title: "Title 1", subtitle: "Subtitle 1", description: "Description 1" },
+  { title: "Exemplo", subtitle: "Produtos Lindos. Super Recomendo!", description: "Fulana" },
   { title: "Title 2", subtitle: "Subtitle 2", description: "Description 2" },
   { title: "Title 3", subtitle: "Subtitle 3", description: "Description 3" },
   { title: "Title 4", subtitle: "Subtitle 4", description: "Description 4" },
   { title: "Title 5", subtitle: "Subtitle 5", description: "Description 5" }
 ];
 
-const $ = selector => document.querySelector(selector);
-const $$ = selector => document.querySelectorAll(selector);
+const listElement = $(".list");
+listElement.innerHTML = "";
+
+data.forEach((item, index) => {
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <h4>${item.title}</h4>
+    <span>${item.subtitle}</span>
+    <p>${item.description}</p>
+  `;
+  listElement.appendChild(li);
+});
 
 
-
-let currentIndex = 2; // Assuming the starting 'act' element is at index 2
 const elements = $$(".list li");
+
+elements.forEach((el, index) => {
+  if (index === 0) el.classList.add("hide");
+  else if (index === 1) el.classList.add("prev");
+  else if (index === 2) el.classList.add("act");
+  else if (index === 3) el.classList.add("next");
+  else if (index === 4) el.classList.add("new-next");
+});
+
+let currentIndex = 0; 
 
 function updateClasses() {
   elements.forEach((el, index) => {
     el.classList.remove("hide", "prev", "act", "next", "new-next");
 
-    if (index === currentIndex - 2) {
+    if (index === (currentIndex - 2 + elements.length) % elements.length) {
       el.classList.add("hide");
-    } else if (index === currentIndex - 1) {
+    } else if (index === (currentIndex - 1 + elements.length) % elements.length) {
       el.classList.add("prev");
     } else if (index === currentIndex) {
       el.classList.add("act");
-    } else if (index === currentIndex + 1) {
+    } else if (index === (currentIndex + 1) % elements.length) {
       el.classList.add("next");
-    } else if (index === currentIndex + 2) {
+    } else if (index === (currentIndex + 2) % elements.length) {
       el.classList.add("new-next");
     }
   });
-
-  // Handle edge cases for circular navigation
-  if (currentIndex - 2 < 0) {
-    elements[elements.length + (currentIndex - 2)].classList.add("hide");
-  }
-  if (currentIndex - 1 < 0) {
-    elements[elements.length + (currentIndex - 1)].classList.add("prev");
-  }
-  if (currentIndex + 1 >= elements.length) {
-    elements[(currentIndex + 1) % elements.length].classList.add("next");
-  }
-  if (currentIndex + 2 >= elements.length) {
-    elements[(currentIndex + 2) % elements.length].classList.add("new-next");
-  }
 }
 
 function next() {
@@ -104,7 +110,6 @@ swipe.on("swiperight", ev => {
   prev();
 });
 
-// Initialize classes on load
 updateClasses();
 
 
