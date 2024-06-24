@@ -196,7 +196,7 @@ footer {
 
 .section-cards > div .title {
     position: absolute;
-    bottom: 47px;
+    bottom: 64px;
     width: 95%;
     text-align: center;
     opacity: 0;
@@ -249,9 +249,11 @@ footer {
     display: flex;
     grid-column-start: 2;
 } */
+ 
 .section-info-social{
     background-color: #71D1FF;
     padding: 30vh 0;
+    display: none;
 }
 
 .title-info-social{
@@ -380,7 +382,89 @@ footer {
   }
 
 
-@media (max-width: 991px) {
+/* Estilos específicos para telefones */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+
+    p, span {
+        font-size: 14px;
+    }
+
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1em;
+    }
+
+    .banner-image img {
+        width: 10em;
+        height: auto;
+    }
+
+    .div-background {
+        width: auto;
+        height: 20em;
+    }
+
+    .about-us {
+        padding: 2em 1em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .info-about-us{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .about-us-img{
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-us-img img {
+        width: 15em;
+    }
+    
+    .section-cards{
+        flex-direction: column;
+        height: 195vh;
+    }
+
+    .section-cards div:hover {
+        flex-grow: 2;
+    }
+
+    .section-cards div img {
+        border-radius: 0;
+    }
+
+    .section-cards > div .title {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        bottom: 0
+    }
+
+  }
+  
+/* Estilos específicos para telefones grandes */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Estilos específicos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
 
     .banner-image img {
         width: 5em;
@@ -388,7 +472,7 @@ footer {
     }
 
     .div-background {
-        width: 44em;
+        width: 25em;
         height: 20em;
     }
 
@@ -399,8 +483,8 @@ footer {
 
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-
+/* Estilos específicos para desktops pequenos */
+@media (min-width: 1025px) and (max-width: 1280px) {
     .banner-image img {
         width: 10em;
         height: auto;
@@ -415,14 +499,12 @@ footer {
         margin-left: 5em;
         margin-right: 5em;
     }
-
 }
 
-@media (min-width: 1200px) {
-
+/* Estilos específicos para desktops grandes */
+@media (min-width: 1281px) {
     .banner-image img {
         width: 30em;
         height: auto;
     }
-
 }
