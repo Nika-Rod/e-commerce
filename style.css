@@ -375,11 +375,60 @@ footer {
     text-align: right;
   }
 
-  .contact, .contact div{
+  .social-media {
+    text-align: center;
+    padding: 40px;
+    background-color: #a3e4a1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.social-media h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-button {
+    display: flex;
     align-items: center;
-  }
+    gap: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-button i {
+    font-size: 24px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25d366;
+}
+
+.contact-button.instagram {
+    background-color: #e1306c;
+}
+
+.contact-button:hover {
+    transform: translateY(-5px);
+}
+
+.contact-button:active {
+    transform: translateY(0);
+}
 
 
 /* Estilos específicos para telefones */
@@ -437,30 +486,72 @@ footer {
         width: 15em;
     }
     
-    .section-cards{
+    #section-products{
+        display: none;
+        opacity: 0;
+    }
+
+    .container-cards-mobile {
+        max-width: 100%;
+        padding: 20px;
+        overflow: hidden; /* Evitar que o conteúdo saia do contêiner */
+    }
+    
+    .info-products-mobile h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .info-products-mobile span {
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: auto; /* Permitir altura automática */
+    }
+    
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
         flex-direction: column;
-        height: 195vh;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; 
+        box-sizing: border-box; 
     }
-
-    .section-cards div:hover {
-        flex-grow: 2;
+    
+    .swiper-slide img {
+        width: 100%;
+        max-height: 250px; /* Defina a altura máxima desejada */
+        object-fit: cover;
     }
-
-    .section-cards div img {
-        border-radius: 0;
+    
+    .swiper-slide .title {
+        margin-top: 10px;
+        font-size: 16px;
     }
-
-    .section-cards > div .title {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        bottom: 0
+    
+    .swiper-button-prev, .swiper-button-next {
+        color: black; /* Ajustar a cor dos botões de navegação para melhor visibilidade */
     }
-
-  }
+}
   
 /* Estilos específicos para telefones grandes */
 @media (min-width: 481px) and (max-width: 767px) {
-
+    #section-products{
+        display: none;
+        opacity: 0;
+    }
 }
 
 /* Estilos específicos para tablets */
@@ -481,6 +572,10 @@ footer {
         margin-right: 2em;
     }
 
+    #section-products-mobile{
+        display: none;
+        opacity: 0;
+    }
 }
 
 /* Estilos específicos para desktops pequenos */
@@ -499,6 +594,11 @@ footer {
         margin-left: 5em;
         margin-right: 5em;
     }
+
+    #section-products-mobile{
+        display: none;
+        opacity: 0;
+    }
 }
 
 /* Estilos específicos para desktops grandes */
@@ -506,5 +606,10 @@ footer {
     .banner-image img {
         width: 30em;
         height: auto;
+    }
+
+    #section-products-mobile{
+        display: none;
+        opacity: 0;
     }
 }

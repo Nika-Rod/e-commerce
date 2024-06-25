@@ -1,9 +1,11 @@
-
-function setSlide() {
-    let divImg = document.querySelectorAll("carousel-image");
-    
-    
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.swiper-container', {
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+  });
+});
 
 function collapse() {
     const numberPhone = document.querySelector('.number-phone');
