@@ -3,8 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-  }
-
+}
 
 body {
     font-family: "Montserrat";
@@ -108,22 +107,21 @@ span {
     font-size: 20px;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
-}
-
 footer {
-    background-color: #74EB7E;
+    background-color: #71D1FF;
+    padding: 5em 0;
 }
 
-.img-logo{
+#section-products-mobile {
+    display: none;
+    opacity: 0;
+}
+
+.img-logo {
     padding-left: 1rem;
 }
 
-.list-bar{
+.list-bar {
     padding-right: 1rem;
 }
 
@@ -155,12 +153,12 @@ footer {
     height: auto;
 }
 
-.container-cards{
+.container-cards {
     background-color: #FFF;
     padding: 5vh;
 }
 
-.info-products{
+.info-products {
     text-align: center;
     padding: 5vh;
 }
@@ -194,9 +192,9 @@ footer {
     transition: transform 0.5s ease-in-out;
 }
 
-.section-cards > div .title {
+.section-cards>div .title {
     position: absolute;
-    bottom: 64px;
+    bottom: 79px;
     width: 95%;
     text-align: center;
     opacity: 0;
@@ -230,7 +228,6 @@ footer {
 }
 
 .about-us {
-    /* background: linear-gradient(3deg, #EB68C2 72%, #FFF 1%); */
     background-color: #EB68C2;
     overflow: hidden;
     display: grid;
@@ -240,23 +237,18 @@ footer {
     padding: 10vh;
 }
 
-.info-about-us{
+.info-about-us {
     grid-column-start: 1;
     grid-column-end: 4;
 }
 
-/* .info-abou-us-img{
-    display: flex;
-    grid-column-start: 2;
-} */
- 
-.section-info-social{
-    background-color: #71D1FF;
+.section-info-social {
+    background-color: #74EB7E;
     padding: 30vh 0;
     display: none;
 }
 
-.title-info-social{
+.title-info-social {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     position: relative;
@@ -266,25 +258,9 @@ footer {
     bottom: 22vh;
 }
 
-/* .info-social {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-} */
-
-
-.about-us-img {
-    height: 22em;
-}
-
-.about-us-img img {
-    width: 25em;
-    height: auto;
-}
 
 .customer-experience {
     background-color: #FFF;
-
 }
 
 .customer-name {
@@ -309,10 +285,10 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%)
-  }
-  
-  .list li {
+    transform: translate(-50%, -50%)
+}
+
+.list li {
     list-style-type: none;
     width: 250px;
     height: 250px;
@@ -325,40 +301,40 @@ footer {
     padding: 4rem 1rem 1rem 1rem;
     border-top-right-radius: 3em;
     border-bottom-left-radius: 3em;
-  }
-  
-  .list .act {
+}
+
+.list .act {
     opacity: 1;
-  }
-  
-  .list .prev,
-  .list .next {
+}
+
+.list .prev,
+.list .next {
     cursor: pointer;
-  }
-  
-  .list .prev {
+}
+
+.list .prev {
     transform: translateX(-220px) scale(.85);
-  }
-  
-  .list .next {
+}
+
+.list .next {
     transform: translateX(220px) scale(.85);
-  }
-  
-  .list .hide {
+}
+
+.list .hide {
     transform: translateX(-420px) scale(.85);
-  }
-  
-  .list .new-next {
+}
+
+.list .new-next {
     transform: translateX(420px) scale(.85);
-  }
-  
-  .list .hide,
-  .list .new-next {
+}
+
+.list .hide,
+.list .new-next {
     opacity: 0;
     transition: opacity .5s, transform .5s;
-  }
-  
-  .swipe {
+}
+
+.swipe {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -366,19 +342,19 @@ footer {
     border-radius: 2px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
-  }
+}
 
-  .list p {
+.list p {
     font-weight: bold;
     text-align: right;
-  }
+}
 
-  .social-media {
+.social-media {
     text-align: center;
     padding: 40px;
-    background-color: #a3e4a1;
+    background-color: #8fd9fd;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -386,10 +362,9 @@ footer {
     font-family: 'Arial', sans-serif;
 }
 
-.social-media h2 {
+
+.social-media p {
     margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
 }
 
 .contact-buttons {
@@ -424,30 +399,50 @@ footer {
 
 .contact-button:hover {
     transform: translateY(-5px);
+    text-decoration: none;
+    color: #FFF;
 }
 
 .contact-button:active {
     transform: translateY(0);
+    text-decoration: none;
+    color: #FFF;
 }
 
 
-/* Estilos específicos para telefones */
-@media (max-width: 480px) {
+@media (min-width: 319px) and (max-width: 376px) {
+
+    .div-background {
+        width: auto;
+        height: auto;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .contact-button {
+        font-size: 10px;
+        padding: 10px 12px;
+    }
 
     h1 {
         font-size: 24px;
     }
+
     h2 {
         font-size: 20px;
     }
+
     h3 {
         font-size: 18px;
     }
+
     h4 {
         font-size: 16px;
     }
 
-    p, span {
+    p,
+    span {
         font-size: 14px;
     }
 
@@ -457,13 +452,8 @@ footer {
     }
 
     .banner-image img {
-        width: 10em;
+        width: 15em;
         height: auto;
-    }
-
-    .div-background {
-        width: auto;
-        height: 20em;
     }
 
     .about-us {
@@ -471,12 +461,12 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .info-about-us{
+    .info-about-us {
         grid-column-start: 1;
         grid-column-end: 1;
     }
 
-    .about-us-img{
+    .about-us-img {
         height: auto;
         display: flex;
         justify-content: center;
@@ -485,8 +475,8 @@ footer {
     .about-us-img img {
         width: 15em;
     }
-    
-    #section-products{
+
+    #section-products {
         display: none;
         opacity: 0;
     }
@@ -494,30 +484,30 @@ footer {
     .container-cards-mobile {
         max-width: 100%;
         padding: 20px;
-        overflow: hidden; /* Evitar que o conteúdo saia do contêiner */
+        overflow: hidden;
     }
-    
+
     .info-products-mobile h2 {
         text-align: center;
         margin-bottom: 10px;
     }
-    
+
     .info-products-mobile span {
         text-align: center;
         display: block;
         margin-bottom: 20px;
     }
-    
+
     .swiper-container {
         width: 100%;
-        height: auto; /* Permitir altura automática */
+        height: auto;
     }
-    
+
     .swiper-wrapper {
         display: flex;
         flex-direction: row;
     }
-    
+
     .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -526,29 +516,168 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px; 
-        box-sizing: border-box; 
+        box-sizing: border-box;
     }
-    
+
     .swiper-slide img {
         width: 100%;
-        max-height: 250px; /* Defina a altura máxima desejada */
+        max-height: 250px;
         object-fit: cover;
     }
-    
+
     .swiper-slide .title {
         margin-top: 10px;
         font-size: 16px;
     }
-    
-    .swiper-button-prev, .swiper-button-next {
-        color: black; /* Ajustar a cor dos botões de navegação para melhor visibilidade */
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: black;
+    }
+
+    footer {
+        padding: 5em 2em;
+    }
+
+    nav {
+        display: none;
     }
 }
-  
+
+/* Estilos específicos para telefones */
+@media (min-width: 377px) and (max-width: 480px) {
+
+    nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    p,
+    span {
+        font-size: 14px;
+    }
+
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1em;
+    }
+
+    .banner-image img {
+        width: 15em;
+        height: auto;
+    }
+
+    .div-background {
+        width: auto;
+        height: 30em;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .about-us {
+        padding: 2em 1em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .info-about-us {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .about-us-img {
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-us-img img {
+        width: 15em;
+    }
+
+    #section-products {
+        display: none;
+        opacity: 0;
+    }
+
+    .container-cards-mobile {
+        max-width: 100%;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .info-products-mobile h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .info-products-mobile span {
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .swiper-slide .title {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: black;
+        /* Ajustar a cor dos botões de navegação para melhor visibilidade */
+    }
+
+    footer {
+        padding: 5em 2em;
+    }
+}
+
 /* Estilos específicos para telefones grandes */
 @media (min-width: 481px) and (max-width: 767px) {
-    #section-products{
+    #section-products {
         display: none;
         opacity: 0;
     }
@@ -557,14 +686,43 @@ footer {
 /* Estilos específicos para tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
 
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
     .banner-image img {
-        width: 5em;
+        width: 18em;
         height: auto;
     }
 
     .div-background {
-        width: 25em;
-        height: 20em;
+        width: auto;
+        height: 35em;
+        padding: 0 2em;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
     }
 
     nav {
@@ -572,14 +730,52 @@ footer {
         margin-right: 2em;
     }
 
-    #section-products-mobile{
+    #section-products-mobile {
         display: none;
         opacity: 0;
+    }
+
+    .about-us img {
+        width: 18em;
+    }
+
+    .list-menu-item {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .list-menu-item a {
+        font-size: 12px;
     }
 }
 
 /* Estilos específicos para desktops pequenos */
 @media (min-width: 1025px) and (max-width: 1280px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
     .banner-image img {
         width: 10em;
         height: auto;
@@ -595,21 +791,129 @@ footer {
         margin-right: 5em;
     }
 
-    #section-products-mobile{
+    #section-products-mobile {
         display: none;
         opacity: 0;
     }
 }
 
 /* Estilos específicos para desktops grandes */
-@media (min-width: 1281px) {
+@media (min-width: 1281px) and (max-width: 1440px) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+
+    #logo-empresa {
+        width: 5em;
+        height: auto;
+    }
+
+    .div-background {
+        width: auto;
+        height: 50em;
+        padding: 0 5em;
+    }
+
     .banner-image img {
         width: 30em;
         height: auto;
     }
 
-    #section-products-mobile{
+    .div-background {
+        width: 60em;
+        height: 25em;
+    }
+
+    #section-products-mobile {
         display: none;
         opacity: 0;
     }
+
+    .div-background {
+        background-image: url(image/background.png);
+        background-size: cover;
+        background-position: center;
+        width: 92%;
+        height: 45em;
+        margin: auto;
+    }
+
+    .about-us-img {
+        height: 30em;
+    }
+
+    .about-us-img img {
+        width: 30em;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 1441px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    span {
+        font-size: 30px;
+    }
+
+    .banner-image img {
+        width: 40em;
+        height: auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+
+    #logo-empresa {
+        width: 10em;
+        height: auto;
+    }
+
+    .div-background {
+        width: auto;
+        height: 50em;
+        padding: 0 5em;
+    }
+
+    .about-us-img {
+        height: 36em;
+    }
+
+    .about-us-img img {
+        width: 40em;
+        height: auto;
+    }
+
+    .list-menu-item a {
+        font-size: 20px;
+    }
+
+
 }
