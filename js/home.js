@@ -1,27 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const swiper = new Swiper('.swiper-container', {
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
+// document.addEventListener('DOMContentLoaded', function() {
+//   const swiper = new Swiper('.swiper-container', {
+//       navigation: {
+//           nextEl: '.swiper-button-next',
+//           prevEl: '.swiper-button-prev',
+//       },
+//   });
+// });
+
+function showContent(id) {
+  var contents = document.querySelectorAll('.content');
+  contents.forEach(function(content) {
+      content.classList.remove('visible');
+      content.style.maxHeight = null;
+      content.style.opacity = 0;
   });
-});
 
-function collapse() {
-    const numberPhone = document.querySelector('.number-phone');
-
-    if (numberPhone.classList.contains('show')) {
-        numberPhone.classList.remove('show');
-        numberPhone.style.height = '0'; 
-    } else {
-        numberPhone.style.height = 'auto'; 
-        let height = numberPhone.scrollHeight + 'px'; 
-        numberPhone.style.height = '0'; 
-        setTimeout(() => { 
-            numberPhone.classList.add('show');
-            numberPhone.style.height = height;
-        }, 10);
-    }
+  var selectedContent = document.getElementById(id);
+  if (selectedContent) {
+      selectedContent.classList.add('visible');
+      selectedContent.style.maxHeight = selectedContent.scrollHeight + "px";
+      selectedContent.style.opacity = 1;
+  }
 }
 
 const $ = selector => document.querySelector(selector);
