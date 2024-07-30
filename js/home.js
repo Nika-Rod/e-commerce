@@ -58,6 +58,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 });
 
+$(document).ready(function(){
+  $('.section-cards-mobile').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
+
 // const $ = selector => document.querySelector(selector);
 // const $$ = selector => document.querySelectorAll(selector);
 
