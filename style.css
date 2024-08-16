@@ -11,114 +11,29 @@ body {
     overflow-x: hidden;
 }
 
-button {
-    background-color: #FFF;
-    border: #ADD8E6 solid 2px;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 35%;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 5%;
-}
-
 nav {
-    background-color: #FFF;
-    margin-left: 10em;
-    margin-right: 10em;
-    border-radius: 0 0 15px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-radius: 0 0 30px 30px; 
+    margin: 0px 25px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 1em;
-}
-
-nav ul li a {
-    --c: #BFA26B;
-    color: var(--c);
-    font-size: 16px;
-    border-radius: 0.5em;
-    width: 8em;
-    height: 3em;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-align: center;
-    line-height: 3em;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    display: block;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-nav ul li a span {
-    position: absolute;
-    width: 25%;
-    height: 100%;
-    background-color: var(--c);
-    transform: translateY(150%);
-    border-radius: 50%;
-    left: calc((var(--n) - 1) * 25%);
-    transition: 0.5s;
-    transition-delay: calc((var(--n) - 1) * 0.1s);
-    z-index: -1;
-}
-
-nav ul li a:hover {
-    color: #FFF;
-}
-
-nav ul li a:hover span {
-    transform: translateY(0) scale(2);
-}
-
-nav ul li a span:nth-child(1) {
-    --n: 1;
-}
-
-nav ul li a span:nth-child(2) {
-    --n: 2;
-}
-
-nav ul li a span:nth-child(3) {
-    --n: 3;
-}
-
-nav ul li a span:nth-child(4) {
-    --n: 4;
-}
 
 h1,
 h2 {
     font-family: "Edu TAS Beginner";
 }
 
-span {
-    font-size: 20px;
-}
-
 #section-social-media {
     position: relative;
-    background-image: url("image/background-img-contact.jpeg"); 
-    background-size: cover; 
-    background-position: top; 
+    background-image: url("image/background-img-contact.jpeg");
+    background-size: cover;
+    background-position: top;
     padding: 5em 0;
     width: 100%;
     height: 80vh;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
 }
 
@@ -129,21 +44,17 @@ span {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
-    z-index: 1; /* Coloca o pseudo-elemento atrás do conteúdo */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 #section-social-media .social-media {
     position: relative;
-    z-index: 2; /* Coloca o conteúdo acima do pseudo-elemento */
+    z-index: 2;
 }
 
 .img-logo {
     padding-left: 1rem;
-}
-
-.list-bar {
-    padding-right: 1rem;
 }
 
 .div-background {
@@ -155,22 +66,8 @@ span {
     margin: auto;
 }
 
-#list-menu {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    font-family: "Edu TAS Beginner";
-    font-weight: 700;
-    font-size: 1.3em;
-}
-
-.list-menu-item {
-    display: inline-block;
-    margin-right: 10px;
-}
-
 #logo-empresa {
-    width: 5em;
+    width: 7em;
     height: auto;
 }
 
@@ -373,14 +270,14 @@ span {
 }
 
 .social-media {
-    background: rgba(0, 0, 0, 0.7); /* Fundo preto com opacidade */
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     padding: 2em;
-    color: white; /* Texto branco */
+    color: white;
 }
 
 #section-social-media .social-media h2 {
-    color: #ffffff; /* Título em branco */
+    color: #ffffff;
     font-size: 2em;
     margin-bottom: 0.5em;
 }
@@ -494,6 +391,106 @@ span {
     color: #9CA3AF;
 }
 
+[class^="number-slide"],
+[class*=" number-slide"] {
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    height: 200px;
+    max-height: 100vh;
+}
+
+.number-slide1 {
+    background-image: url("image/oficina.jpg");
+    background-size: cover;
+}
+
+.thumbnail .number-slide1 {
+    background-image: url("image/oficina.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.number-slide2 {
+    background-image: url("image/mercadinho.jpg");
+    background-size: cover;
+}
+
+
+.thumbnail .number-slide2 {
+    background-image: url("image/mercadinho.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.number-slide3 {
+    background-image: url("image/cozinha.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail .number-slide3 {
+    background-image: url("image/cozinha.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.number-slide4 {
+    background-image: url("image/estante-fem.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail .number-slide4 {
+    background-image: url("image/estante-fem.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.number-slide5 {
+    background-image: url("image/lavanderia.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail .number-slide5 {
+    background-image: url("image/lavanderia.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.number-slide6 {
+    background: rgb(64, 76, 255);
+    background: linear-gradient(128deg,
+            rgba(64, 76, 255, 1) 0%,
+            rgba(174, 63, 255, 1) 100%);
+}
+
+.thumbnail .number-slide6 {
+    background: rgb(64, 76, 255);
+    background: linear-gradient(128deg,
+            rgba(64, 76, 255, 1) 0%,
+            rgba(174, 63, 255, 1) 100%);
+}
+
+.thumbnail .keen-slider__slide {
+    font-size: 30px;
+    margin-top: 10px;
+    height: 100px;
+}
+
+.thumbnail .keen-slider__slide {
+    cursor: pointer;
+}
+
+.thumbnail .keen-slider__slide.active {
+    border: 2px dashed white;
+}
+
 
 @media (min-width: 319px) and (max-width: 376px) {
 
@@ -512,14 +509,17 @@ span {
 
     h1 {
         font-size: 24px;
+        text-align: center;
     }
 
     h2 {
         font-size: 20px;
+        text-align: center;
     }
 
     h3 {
         font-size: 18px;
+        text-align: center;
     }
 
     h4 {
@@ -570,11 +570,7 @@ span {
         padding: 5em 2em;
     }
 
-    nav {
-        display: none;
-    }
-
-    #section-social-media{
+    #section-social-media {
         height: 35vh;
     }
 
@@ -582,24 +578,24 @@ span {
         background: rgba(0, 0, 0, 0.0)
     }
 
-    .section-cards-mobile img {
-        width: 100%;
+    #logo-empresa{
+        width: 4em;
+        height: auto;
     }
+
 }
 
 /* Estilos específicos para telefones */
 @media (min-width: 377px) and (max-width: 480px) {
 
-    nav {
-        display: none;
-    }
-
     h1 {
         font-size: 24px;
+        text-align: center;
     }
 
     h2 {
         font-size: 20px;
+        text-align: center;
     }
 
     h3 {
@@ -673,7 +669,7 @@ span {
         padding: 5em 2em;
     }
 
-    #section-social-media{
+    #section-social-media {
         height: 42vh;
     }
 
@@ -681,18 +677,18 @@ span {
         background: rgba(0, 0, 0, 0.0)
     }
 
-    .section-cards-mobile img {
-        width: 100%;
+    #logo-empresa{
+        width: 5em;
+        height: auto;
     }
+
 }
+
+
 
 /* Estilos específicos para telefones grandes */
 @media (min-width: 481px) and (max-width: 767px) {
 
-    nav {
-        display: none;
-    }
-
     h1 {
         font-size: 24px;
     }
@@ -772,7 +768,7 @@ span {
         padding: 5em 2em;
     }
 
-    #section-social-media{
+    #section-social-media {
         height: 42vh;
     }
 
@@ -785,8 +781,9 @@ span {
         opacity: 0;
     }
 
-    .section-cards-mobile img {
-        width: 100%;
+    #logo-empresa{
+        width: 5em;
+        height: auto;
     }
 }
 
@@ -832,11 +829,6 @@ span {
         align-content: center;
     }
 
-    nav {
-        margin-left: 2em;
-        margin-right: 2em;
-    }
-
     #section-products-mobile {
         display: none;
         opacity: 0;
@@ -846,19 +838,15 @@ span {
         width: 18em;
     }
 
-    .list-menu-item {
-        display: inline-block;
-        margin-right: 5px;
-    }
-
-    .list-menu-item a {
-        font-size: 12px;
-    }
-
     .section-cards>div .title {
         bottom: 57px;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
+    }
+
+    #logo-empresa{
+        width: 5em;
+        height: auto;
     }
 }
 
@@ -904,39 +892,53 @@ span {
         align-content: center;
     }
 
-    nav {
-        margin-left: 5em;
-        margin-right: 5em;
-    }
-
     #section-products-mobile {
         display: none;
         opacity: 0;
     }
 
-    .about-us-img img{
+    .about-us-img img {
         width: 85%;
     }
 
-    .section-cards>div .title{
+    .section-cards>div .title {
         bottom: 57px;
     }
-    
+
 }
 
 /* Estilos específicos para desktops grandes */
 @media (min-width: 1200px) and (max-width: 1919px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    span {
+        font-size: 18px;
+    }
 
     main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-items: center;
-    }
-
-    #logo-empresa {
-        width: 5em;
-        height: auto;
     }
 
     .banner-image img {
@@ -1018,11 +1020,6 @@ span {
         justify-items: center;
     }
 
-    #logo-empresa {
-        width: 7em;
-        height: auto;
-    }
-
     .div-background {
         width: auto;
         height: 50em;
@@ -1038,13 +1035,14 @@ span {
         height: auto;
     }
 
-    .list-menu-item a {
-        font-size: .8em;
-    }
-
     #section-products-mobile {
         display: none;
         opacity: 0;
+    }
+
+    #logo-empresa {
+        width: 10em;
+        height: auto;
     }
 
 }
