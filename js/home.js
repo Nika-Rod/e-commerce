@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   const imageContainers = document.querySelectorAll('.imageContainer');
   const imageMapping = {
-    'oficinaImage': ['image/oficina.jpg', 'image/mercadinho.jpg', 'image/cozinha.jpg'],
-    'mercadinhoImage': ['image/mercadinho.jpg', 'image/mercadinho.jpg', 'image/cozinha.jpg'],
-    'cozinhaImage': ['image/cozinha.jpg', 'image/mercadinho.jpg', 'image/cozinha.jpg'],
-    'estanteImage': ['image/estante-fem.jpg', 'image/mercadinho.jpg', 'image/cozinha.jpg'],
-    'lavanderiaImage': ['image/lavanderia.jpg', 'image/mercadinho.jpg', 'image/cozinha.jpg']
+    'oficinaImage': ['image/oficina.jpg'],
+    'mercadinhoImage': ['image/mercadinho.jpg'],
+    'cozinhaImage': ['image/cozinha.jpg'],
+    'estanteImage': ['image/estante-fem.jpg'],
+    'lavanderiaImage': ['image/lavanderia.jpg']
   };
 
   imageContainers.forEach(container => {
