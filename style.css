@@ -16,6 +16,15 @@ nav {
     margin: 0 2.5rem;
 }
 
+nav div ul li a {
+    color: #826E52 !important;
+    font-weight: 600 !important;
+}
+
+nav div ul li a:hover {
+    text-decoration: none;
+    color: #BFA36F !important;
+}
 
 h1,
 h2 {
@@ -426,6 +435,48 @@ h2 {
 }
 
 
+footer {
+    padding: 4rem;
+    background: #08C7F3;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 2px 5px #020202;
+}
+
+footer div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+footer img {
+    width: 7rem;
+    height: auto;
+    border-radius: 5rem;
+    filter: drop-shadow(1px 1px 10px #292828 );
+}
+
+footer span {
+    font-size: 12px;
+}
+
+footer p {
+    font-size: 10px;
+}
+
+footer p a:hover{
+    text-decoration: none;
+    color: #826E52;
+}
+
+.info-company {
+    gap: .3rem;
+}
+
+
+
 @media (min-width: 319px) and (max-width: 376px) {
 
     nav {
@@ -537,7 +588,30 @@ h2 {
         font-size: 24px;
     }
 
+    footer {
+        padding: 2rem;
+    }
 
+    footer div{
+        gap: 1rem;
+    }
+
+    footer img {
+        width: 6rem;
+        height: auto;
+    }
+
+    .info-company {
+        gap: .1rem;
+    }
+
+    footer span {
+        font-size: 12px;
+    }
+    
+    footer p {
+        font-size: 10px;
+    }
 }
 
 /* Estilos específicos para telefones */
@@ -657,6 +731,30 @@ h2 {
         font-size: 24px;
     }
 
+    footer {
+        padding: 2rem;
+    }
+
+    footer div{
+        gap: 1rem;
+    }
+
+    footer img {
+        width: 6rem;
+        height: auto;
+    }
+
+    .info-company {
+        gap: .1rem;
+    }
+
+    footer span {
+        font-size: 12px;
+    }
+    
+    footer p {
+        font-size: 10px;
+    }
 }
 
 
@@ -775,6 +873,19 @@ h2 {
         margin-bottom: 2rem !important;
         font-size: 26px;
     }
+
+    footer img {
+        width: 3rem;
+        height: auto;
+    }
+
+    footer span {
+        font-size: 14px;
+    }
+    
+    footer p {
+        font-size: 12px;
+    }
 }
 
 /* Estilos específicos para tablets */
@@ -863,6 +974,27 @@ h2 {
         font-size: 28px;
         margin-bottom: 2rem !important;
     }
+
+    footer {
+        padding: 3rem;
+    }
+
+    footer img {
+        width: 8rem;
+        height: auto;
+    }
+
+    .info-company {
+        gap: .2rem;
+    }
+
+    footer span {
+        font-size: 15px;
+    }
+    
+    footer p {
+        font-size: 13px;
+    }
 }
 
 /* Estilos específicos para desktops pequenos */
@@ -947,6 +1079,35 @@ h2 {
         margin-bottom: 2rem !important;
         font-size: 26px;
     }
+
+    footer {
+        padding: 2rem;
+    }
+
+    footer div{
+        gap: 2rem;
+    }
+
+    footer img {
+        width: 10rem;
+        height: auto;
+    }
+
+    .info-company {
+        gap: .1rem;
+    }
+
+    footer h5 {
+        font-size: 18px;
+    }
+
+    footer span {
+        font-size: 14px;
+    }
+    
+    footer p {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1599px) {
@@ -1029,6 +1190,18 @@ h2 {
         margin-bottom: 2rem !important;
     }
 
+    footer h5 {
+        font-size: 18px;
+    }
+
+    footer span {
+        font-size: 14px;
+    }
+    
+    footer p {
+        font-size: 12px;
+    }
+
 }
 
 /* Estilos específicos para desktops grandes */
@@ -1086,7 +1259,7 @@ h2 {
     }
 
     .about-us {
-        padding: 2rem;
+        padding: 4rem;
     }
 
     .about-us-img {
@@ -1110,6 +1283,14 @@ h2 {
     .social-midia h2 {
         font-size: 30px;
         margin-bottom: 2rem !important;
+    }
+
+    footer span {
+        font-size: 12px;
+    }
+    
+    footer p {
+        font-size: 10px;
     }
 
 }
@@ -1229,5 +1410,22 @@ h2 {
 
     .contact-button i {
         font-size: 50px;
+    }
+
+    footer img {
+        width: 12rem;
+        height: auto;
+    }
+
+    footer h5 {
+        font-size: 20px;
+    }
+
+    footer span {
+        font-size: 18px;
+    }
+    
+    footer p {
+        font-size: 14px;
     }
 }
